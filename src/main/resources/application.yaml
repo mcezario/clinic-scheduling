@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: clinic-scheduling
+  datasource:
+    url: changeit
+    username: changeit
+    password: changeit
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+      jdbc:
+        time_zone: UTC
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    enabled: true
+
+app:
+  business-hours:
+    timezone: America/Vancouver
+    appointment-notice-hours: 2
+    ampm-start: 9 # AM/PM
+    ampm-end: 17 # AM/PM
+    hh-end: 5  # 12-hour
+    weekends: false

@@ -1,0 +1,16 @@
+spring:
+  config:
+    active:
+      on-profile: local
+  datasource:
+    url: jdbc:postgresql://localhost:5432/clinic_scheduling
+    username: postgres
+    password: dbpasswd
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    baseline-version: 1
+
+app:
+  business-hours:
+    weekends: true
